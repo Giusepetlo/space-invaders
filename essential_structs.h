@@ -15,6 +15,7 @@ struct score_t {
 	unsigned int points;
 	unsigned int level;
 	unsigned int maior;
+	unsigned int retorno;
 };
 
 struct saucer_t {
