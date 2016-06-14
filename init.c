@@ -11,9 +11,9 @@
 
 void init_score() {
 
-	score.shots = 0;
-	score.points = 0;
-	score.level = 1;
+    score.shots = 0;
+    score.points = 0;
+    score.level = 1;
 }
 
 
@@ -68,41 +68,41 @@ void init_invaders() {
     }
 }
 
-
+//Inicializa a posição inicial do jogador e suas dimensões
 //Initialize the player starting position and dimensions
 void init_player() {
 
-	player.hitbox.x = (WIDTH / 2) - (P_WIDTH / 2);
-	player.hitbox.y = HEIGHT - (P_HEIGHT + 10);
-	player.hitbox.w = P_WIDTH;
-	player.hitbox.h = P_HEIGHT;
-	player.lives = 3;
+    player.hitbox.x = (WIDTH / 2) - (P_WIDTH / 2);
+    player.hitbox.y = HEIGHT - (P_HEIGHT + 10);
+    player.hitbox.w = P_WIDTH;
+    player.hitbox.h = P_HEIGHT;
+    player.lives = 3;
 }
-
+//Inicializa as dimensões das balas
 //Initialize the player bullets dimensions
 void init_bullets(struct bullet_t b[], int max) {
 
-	int i;
+    int i;
 
-	for (i = 0; i < max; i++) {
-	
-		b[i].alive = 0;
-		b[i].hitbox.x = 0;
-		b[i].hitbox.y = 0;
-		b[i].hitbox.w = B_WIDTH;
-		b[i].hitbox.h = B_HEIGHT;
-	}
+    for (i = 0; i < max; i++) {
+
+        b[i].alive = 0;
+        b[i].hitbox.x = 0;
+        b[i].hitbox.y = 0;
+        b[i].hitbox.w = B_WIDTH;
+        b[i].hitbox.h = B_HEIGHT;
+    }
 }
-
+//Inicializa a posição e as dimensões do saucer(nave espacial)
 //Initialize the saucer position and dimensions
 void init_saucer() {
 
-	saucer.hitbox.x = 0;	
-	saucer.hitbox.y	= 0;
-	saucer.hitbox.w	= 30;
-	saucer.hitbox.h = 20;
-	saucer.alive = 0;
-	saucer.direction = right;
+    saucer.hitbox.x = 0;
+    saucer.hitbox.y	= 0;
+    saucer.hitbox.w	= 30;
+    saucer.hitbox.h = 20;
+    saucer.alive = 0;
+    saucer.direction = right;
 }
 
 
