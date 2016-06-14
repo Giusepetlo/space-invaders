@@ -1,3 +1,8 @@
+//Giusepe Lopes (tessarigiusepe@yahoo.com.br)
+//PUCRS
+//Junho de 2016
+
+
 #include "SDL/SDL.h"
 #include <stdio.h>
 
