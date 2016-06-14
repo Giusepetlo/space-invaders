@@ -1,3 +1,8 @@
+//Giusepe Lopes (tessarigiusepe@yahoo.com.br)
+//PUCRS
+//Junho de 2016
+
+
 #include <stdio.h>
 #include "maxpont.h"
 #include "diverses.h"
