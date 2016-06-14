@@ -1,3 +1,8 @@
+//Giusepe Lopes (tessarigiusepe@yahoo.com.br)
+//PUCRS
+//Junho de 2016
+
+
 #define SCREEN_WIDTH 800 
 #define SCREEN_HEIGHT 600
 #define E_WIDTH 30
