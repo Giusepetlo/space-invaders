@@ -1,0 +1,45 @@
+.TH man 6 "15 April 2016" "1.0" "invaders man page"
+.SH NOME
+invaders \- recriação da versão de Robert HC Leong(1990) do jogo space invaders na linguagem C.
+.SH SINOPSE
+invaders não possui sinopse.
+.SH DESCRIÇÃO
+Space Invaders é um clássico jogo que originalmente ficou famoso por suas versões para fliperama e para o console Atari. O aplicativo invaders é uma recriação desse jogo na linguagem de programação C. O aplicativo foi implementado usando a biblioteca SDL para reproduzir a interface gráfica na tela, e a biblioteca SDL_mixer para reproduzir a musica de fundo, portanto é necessário ter ambas as bibliotecas e seus cabeçalhos instalados para a compilação ser realizada com sucesso.
+
+
+
+##Controles:
+
+-Barra de espaço inicia o jogo. Após o game over, aperte espaço para reiniciar a partida. Durante o jogo, barra de espaço passa a ser usada para o comando atirar.
+
+-As flechas do teclado controlam o movimento.
+
+-A tecla ESC fecha o jogo.
+
+-Durante o jogo, a tecla "p" permite pausar o jogo por um período de tempo.
+
+
+
+##Informações adicionais:
+
+    
+-Para ativar o sistema de armazenamento da maior pontuação no jogo(recorde), é necessário apertar a tecla "s" na tela inicial, logo na primeira execução do aplicativo. Para reiniciar a pontuação recorde, basta proceder da mesma maneira.
+
+-O sistema de pontuação funciona da seguinte maneira:
+
+		Eliminar invaders vermelhos acrescenta 10 pontos na pontuação total.
+
+		Eliminar invaders verdes acrescenta 20 pontos na pontuação total.
+
+		Eliminar invaders roxos acrescenta 30 pontos na pontuação total.
+
+-O disco voador aparece no topo da tela a cada 20 tiros do jogador. Eliminá-lo acrescenta na pontuação total. O acréscimo é aleatório, podendo valer 50,150 ou 300 pontos. 
+
+-Caso o inimigo acerte o jogador, será subtraído 1 do total de vidas e o nível será reiniciado. 
+
+-As bases suportam 3 tiros no mesmo local até que aquele local seja quebrado. Quando quebrada, a base permite que as balas dos inimigos e do jogador atravessem. 
+
+.SH OPÇÕES
+invaders não possui opções.
+.SH AUTOR
+Jogo desenvolvido por J. Lambert. Manual em português escrito por Giusepe Lopes(tessarigiusepe@yahoo.com.br). 	    

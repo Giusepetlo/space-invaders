@@ -1,0 +1,18 @@
+Para ter acesso ao manual do jogo Space Invaders, prossiga da seguinte maneira:
+
+Dentro do diretorio em que se encontra o arquivo de texto, execute o seguinte comando:
+cp invaders.6 /usr/local/man/man6/
+
+
+*OBS.: Se o sistema possuir o diretório man6, mas acusar que não foi possível copiar, é necessário entrar como root no terminal para realizar essa tarefa.
+
+*OBS2.: Se o sistema não possuir o diretório man6, também é necessário entrar como root no terminal, e então: cd /usr/local/man 
+												      mkdir man6
+
+
+Em seguida, após copiado para dentro do diretório man6, execute o próximo comando: 
+gzip /usr/local/man/man6/invaders.6
+
+
+
+Por fim, basta digitar man invaders no terminal e a página do manual do aplicativo será apresentada!
