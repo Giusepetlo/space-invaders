@@ -110,8 +110,8 @@ void draw_hud() {
 	char shots_cab[] = "Tiros";
 	draw_string(shots_cab, WIDTH, 240);
 
-	char score_shots[1000];
-	snprintf(score_shots, 1000, "%d", score.shots);
+	char score_shots[10];
+	snprintf(score_shots, 10, "%d", score.shots);
 	draw_string(score_shots, WIDTH, 260);
 
 	char ini_mortos[]= "Inimigos";
@@ -120,8 +120,8 @@ void draw_hud() {
 	char ini_mortos_2[]= "mortos";
 	draw_string(ini_mortos_2, WIDTH, 320);
 
-	char qtd_mortos[1000];
-	snprintf(qtd_mortos, 1000, "%d - 50", invaders.killed);
+	char qtd_mortos[10];
+	snprintf(qtd_mortos, 10, "%d - 50", invaders.killed);
 	draw_string(qtd_mortos, WIDTH, 340);
 
 	char author[] = "Criado por:";
@@ -605,13 +605,6 @@ int main() {
 	SDL_Event event;
 	
 
-	//Função da biblioteca SDL_mixer, que recebe como parâmetros a frequencia que a musica será reproduzida, o formato, o numero de canais e o buffer.
-	Mix_OpenAudio(22050,MIX_DEFAULT_FORMAT,2,4096);
-	Mix_Music* music;	
-	music=Mix_LoadMUS("8bits.wav");
-	Mix_PlayMusic(music,-1);
-
-	
 	init_score();
 	init_invaders();
 	init_bases();
@@ -633,7 +626,7 @@ int main() {
 		while (SDL_PollEvent(&event)) {
 
 			switch(event.type) {
-				
+				//Caso alguma tecla seja apertada			
 				case SDL_KEYDOWN:
 					
 					switch( event.key.keysym.sym ) {
@@ -700,6 +693,11 @@ int main() {
 		if (state == menu) {
 			
 			char s[] = "Pressione ESPACO para jogar";
+
+			char av[] = "S-Pressione em sua primeira partida";
+			
+			char av2[] = "P-Pressione para pausar o jogo";
+
 			SDL_Rect src[60];
 			
 			int i;
@@ -738,6 +736,8 @@ int main() {
 			
 			draw_title_screen();	
 			draw_string(s, (SCREEN_WIDTH / 2) - (strlen(s) * 10), 500);
+			draw_string(av, 25, 380);
+			draw_string(av2, 25, 410);
 
 		} else if (state == game) {
 			//movimenta o jogador
@@ -814,10 +814,6 @@ int main() {
 	
 	}
 	
-
-	//libera a variavel music e fecha o audio
-	Mix_FreeMusic(music);
-	Mix_CloseAudio();
 
 	return 0;
 }
