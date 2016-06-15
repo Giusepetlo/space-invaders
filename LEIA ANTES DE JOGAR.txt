@@ -16,3 +16,6 @@ gzip /usr/local/man/man6/invaders.6
 
 
 Por fim, basta digitar man invaders no terminal e a página do manual do aplicativo será apresentada!
+
+Sites de apoio:
+	vivaolinux.com.br
