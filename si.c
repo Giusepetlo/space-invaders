@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "SDL/SDL.h"
-
+#include "SDL/SDL_mixer.h"
 #include "init.h"
 #include "move.h"
 #include "collision.h"
@@ -570,6 +570,8 @@ int main() {
 		printf("Unable to initialize SDL: %s\n", SDL_GetError());
 		return 1;
 	}
+	/*Inicializa o sistema de audio SDL*/
+	SDL_Init(SDL_INIT_AUDIO);
 	/*Garante que SDL_Quit será chamado quando o programa for fechado!*/
 	/* Make sure SDL_Quit gets called when the program exits! */
 	atexit(SDL_Quit);
@@ -602,6 +604,12 @@ int main() {
 	int quit = 0;
 	SDL_Event event;
 	
+	//Função da biblioteca SDL_mixer, que recebe como parâmetros a frequencia que a musica será reproduzida, o formato, o numero de canais e o buffer.
+	Mix_OpenAudio(50000,MIX_DEFAULT_FORMAT,2,4096);
+	Mix_Music* musica;	
+	musica=Mix_LoadMUS("Musica.wav");
+	Mix_PlayMusic(musica,-1);
+
 
 	init_score();
 	init_invaders();
@@ -812,6 +820,9 @@ int main() {
 	
 	}
 	
+	//libera a variavel musica e fecha o audio
+	Mix_FreeMusic(musica);
+	Mix_CloseAudio();
 
 	return 0;
 }
