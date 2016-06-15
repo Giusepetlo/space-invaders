@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "SDL/SDL.h"
-#include "SDL/SDL_mixer.h"
+
 #include "init.h"
 #include "move.h"
 #include "collision.h"
@@ -570,8 +570,6 @@ int main() {
 		printf("Unable to initialize SDL: %s\n", SDL_GetError());
 		return 1;
 	}
-	/*Inicializa o sistema de audio SDL*/
-	SDL_Init(SDL_INIT_AUDIO);
 	/*Garante que SDL_Quit será chamado quando o programa for fechado!*/
 	/* Make sure SDL_Quit gets called when the program exits! */
 	atexit(SDL_Quit);
